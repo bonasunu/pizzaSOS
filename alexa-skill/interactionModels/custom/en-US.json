@@ -1,0 +1,73 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "tuna pizza",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "PizzaOrderIntent",
+          "slots": [
+            {
+              "name": "totalpizza",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "yes I would like to order {totalpizza} pizza",
+            "yes {totalpizza} pizza",
+            "yes {totalpizza} pizza please"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "PizzaOrderIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "totalpizza",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.320559224907.491757484950"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.320559224907.491757484950",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many pizza that you want to order?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "6"
+}
