@@ -1,5 +1,5 @@
 # SOS Pizza!
-Amazon Skill for emergency declaration via fake pizza order. I built this project when I register Garuda Hackathon 2020.
+Alexa Skill for emergency declaration via fake pizza order. I built this project when I register Garuda Hackathon 2020.
 
 ## Tech Stack
 Alexa Skill, NodeJS, ExpressJS, Axios
